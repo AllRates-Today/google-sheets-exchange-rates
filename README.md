@@ -35,3 +35,7 @@ These are official daily fixings. For live mid-market rates you need a [free API
 ## License
 
 MIT. Rate data is free to use with attribution to [AllRatesToday](https://allratestoday.com).
+
+## 🔗 Links
+
+- **AI agents:** Claude Code plugin `/plugin marketplace add AllRates-Today/claude-code-plugin` · hosted MCP endpoint `https://allratestoday.com/api/mcp` (keyless)
