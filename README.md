@@ -22,7 +22,7 @@ Or use **Use this template** on GitHub to keep your own copy, and push it to a s
 
 ## Where the numbers come from
 
-`CBRATE`, `CBCONVERT`, `CBDATE` and `CBTABLE` read the keyless [AllRatesToday open endpoint](https://allratestoday.com/central-bank-rates-api/), which republishes each institution's own table once a day: ECB, Federal Reserve, Bank of England, RBI, PBoC, HMRC, US Treasury and 100 more. `CBHISTORY` reads the daily CSV files in [central-bank-exchange-rates](https://github.com/AllRates-Today/central-bank-exchange-rates) through jsDelivr.
+`CBRATE`, `CBCONVERT`, `CBDATE` and `CBTABLE` read the keyless [AllRatesToday open endpoint](https://allratestoday.com/central-bank-rates-api/), which republishes each institution's own table once a day: ECB, Federal Reserve, Bank of England, RBI, PBoC, HMRC, US Treasury and 117 more. `CBHISTORY` reads the daily CSV files in [central-bank-exchange-rates](https://github.com/AllRates-Today/central-bank-exchange-rates) through jsDelivr.
 
 Rates are cached for 30 minutes inside Apps Script, so a sheet full of formulas makes one request per bank.
 
