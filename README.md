@@ -22,7 +22,7 @@ Or use **Use this template** on GitHub to keep your own copy, and push it to a s
 
 ## Where the numbers come from
 
-`CBRATE`, `CBCONVERT`, `CBDATE` and `CBTABLE` read the keyless [AllRatesToday open endpoint](https://allratestoday.com/central-bank-rates-api/), which republishes each institution's own table once a day: ECB, Federal Reserve, Bank of England, RBI, PBoC, HMRC, US Treasury and 117 more. `CBHISTORY` reads the daily CSV files in [central-bank-exchange-rates](https://github.com/AllRates-Today/central-bank-exchange-rates) through jsDelivr.
+`CBRATE`, `CBCONVERT`, `CBDATE` and `CBTABLE` read the keyless [AllRatesToday open endpoint](https://allratestoday.com/central-bank-rates-api/), which republishes each institution's own table once a day: ECB, Federal Reserve, Bank of England, RBI, PBoC, HMRC, US Treasury and 117 more. `CBHISTORY` reads the daily CSV files in [central-bank-exchange-rates](https://github.com/AllRates-Today/central-bank-exchange-rates) from raw.githubusercontent.com.
 
 Rates are cached for 30 minutes inside Apps Script, so a sheet full of formulas makes one request per bank.
 
@@ -30,11 +30,11 @@ Source codes: `ecb`, `fed`, `boe`, `boc`, `rba`, `rbi`, `pboc`, `boj`, `snb`, `h
 
 ## Real-time rates
 
-These are official daily fixings. For live mid-market rates you need a [free API key](https://allratestoday.com/register); the [Google Sheets add-on](https://allratestoday.com/docs/) covers that.
+These are official daily fixings. For live mid-market rates you need a [free API key](https://allratestoday.com/register) and the [REST API](https://allratestoday.com/docs/) (call it from Apps Script with `UrlFetchApp` and an `Authorization: Bearer` header). A Google Sheets add-on for live rates is coming; until then, use this script.
 
 ## License
 
-MIT. Rate data is free to use with attribution to [AllRatesToday](https://allratestoday.com).
+MIT (this code). Rates from the keyless open endpoint (`CBRATE`, `CBCONVERT`, `CBDATE`, `CBTABLE`) are free to use with visible attribution to [AllRatesToday](https://allratestoday.com). The history files `CBHISTORY` reads come from the [central-bank-exchange-rates](https://github.com/AllRates-Today/central-bank-exchange-rates) dataset, which is licensed CC BY-NC 4.0 (non-commercial use only).
 
 ## 🔗 Links
 

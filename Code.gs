@@ -10,15 +10,16 @@
  *   =CBCONVERT(100, "USD", "EUR", "fed")
  *   =CBTABLE("boe")                     the whole latest table as rows
  *   =CBDATE("ecb")                      publication date of the latest table
- *   =CBHISTORY("ecb", 2026)             every rate the ECB published in 2026 (CSV via jsDelivr)
+ *   =CBHISTORY("ecb", 2026)             every rate the ECB published in 2026 (CSV from GitHub)
  *
  * Data: https://allratestoday.com/central-bank-rates-api/ (keyless open endpoint) and
  * https://github.com/AllRates-Today/central-bank-exchange-rates (daily JSON/CSV files).
- * Free to use with attribution to AllRatesToday.
+ * Open endpoint: free to use with visible attribution to AllRatesToday.
+ * Dataset files (CBHISTORY): CC BY-NC 4.0, non-commercial use only.
  */
 
 var OPEN_ = 'https://allratestoday.com/api/open/central-bank/';
-var FILES_ = 'https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/';
+var FILES_ = 'https://raw.githubusercontent.com/AllRates-Today/central-bank-exchange-rates/main/data/';
 
 function table_(bank) {
   bank = String(bank || 'ecb').toLowerCase();
